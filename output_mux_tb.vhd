@@ -6,8 +6,10 @@ library pck_lib;
 use pck_lib.sim.all;
 use pck_lib.types.all;
 
+library output_mux_lib;
+
 entity output_mux_tb is
-end output_mux_tb; 
+end output_mux_tb;
 
 architecture sim of output_mux_tb is
 
@@ -17,7 +19,7 @@ architecture sim of output_mux_tb is
 
 begin
 
-  DUT : entity seg7.output_mux(rtl)
+  DUT : entity output_mux_lib.output_mux(rtl)
   port map (
     digit_sel => digit_sel,
     digits => digits,

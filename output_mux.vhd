@@ -18,6 +18,6 @@ architecture rtl of output_mux is
 begin
 
     -- Output one of the two digits
-    digit <= digits(0) when digit_sel = '0' else digits(1);
+    digit <= digits(1) when digit_sel = '0' else digits(0);
   
 end architecture;
